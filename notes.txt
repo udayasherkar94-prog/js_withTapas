@@ -1,0 +1,47 @@
+
+**DAY 1 Notes
+
+JavaScript Script Loading (Simple Notes)
+1. Inline Script
+JavaScript written inside HTML
+✅ Good for small code
+❌ Bad for big projects (hard to manage)
+
+2. External Script (Normal <script>)
+Browser reads HTML top to bottom
+When it finds <script>:
+HTML stops
+Script downloads and runs
+Then HTML continues
+❌ Can slow page
+❌ DOM may not be ready
+
+3. async
+Script downloads while HTML loads
+Runs as soon as it’s ready
+Order not fixed
+❌ DOM may not be ready
+✅ Best for ads, analytics, chatbots
+
+4. defer ⭐ (Most Important)
+Script downloads while HTML loads
+Runs after HTML is fully loaded
+DOM is ready
+Scripts run in order
+✅ Best for most websites
+
+5. Best Practice
+Use defer for normal JavaScript
+Use async for third-party scripts
+JavaScript Outside Browser (Node.js)
+JavaScript can run on server
+Tool used: Node.js
+Run file using: node file.js
+
+
+🔑 One-Line Summary
+
+defer = safe + fast + recommended
+async = fast but risky
+normal script = slow
+Node.js = JS outside browser
