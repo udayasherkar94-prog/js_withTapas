@@ -106,8 +106,6 @@ let s1 = 20
 let s2 = 10
 let s3 = 15
 
-
-
 if(s1 === s2 && s2 === s3) {
     console.log("Equilateral Triangle");
 } else if(s1 === s2 || s2 === s3 || s1 === s3) {

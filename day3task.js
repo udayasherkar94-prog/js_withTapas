@@ -103,6 +103,8 @@ else{
 }
 
 //task 8)Biwise Doubling
+//double of 5 is 10
+//5 << 1 → 5 × 2 = 10 (bitwise shift left)
 
 let count = 5
 console.log(count<<1)
