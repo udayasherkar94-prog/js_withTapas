@@ -45,3 +45,74 @@ const factorial = function fact(n){
 } 
 
 console.log(factorial(3))
+
+//recursion function calling itself
+
+// function foo(){
+//     foo()//it runs till memory fills full error
+// }
+
+// foo() RangeError: Maximum call stack size exceeded
+
+function count(num){
+    if(num===0){
+       return 0
+
+    } 
+   
+    // console.log(num)
+    return num + " " +count(num-1)
+}
+
+let backWard = count(10);
+console.log(backWard)
+
+//function parameters default | rest 
+
+function add(a,b,c){ 
+    return a+b+c
+}
+console.log(add(1,2)) //O/P: NaN (not an number) it take a:1 b:2 c: undefined so  number+undefined = NaN
+
+function add1(a,b,c=0){ //c is a default parameter with 0 value
+    return a+b+c
+}
+console.log(add(1,2))//O/P:3
+
+//rest parameter
+
+function add2(a,b,c,d,...rest){
+    console.log(a,b,c,d,rest)
+    return a+b+c+d
+
+}
+console.log(add2(1,2,3,4,4,5,6,7,8,9,10,11,12))
+
+//nested functions 
+
+var x = 10;
+let y = 20;
+const z = 30;
+function outer(){
+    console.log("i am in outer scope")
+
+    function inner(){
+        var inner = 100       
+        console.log(x,y,z)
+        console.log("i am in inner scope")
+    }
+    inner();
+}
+outer();
+// console.log(inner);//ReferenceError: inner is not defined
+
+//callback function
+
+function msg(name,callback){
+    console.log("hello"+" "+name)
+    callback();
+}
+
+msg("rohan",function(){
+    console.log("good night")
+})
