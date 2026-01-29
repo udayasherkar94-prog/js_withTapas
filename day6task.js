@@ -110,3 +110,42 @@ function greeting(name,callback){
 greeting("ajit",function(){
     console.log("good night")
 })
+
+//task 9)
+// function f1() {}
+// function f2() {
+//     f1();
+// }
+// f2();
+
+// callstask:top to bottom last in first out
+
+// fun1 //fun1 with local memeory  
+// ------
+// fun2   //fun2 with local memory and call fun1
+// ------
+// G E C // global execution context
+// -----
+
+
+//task10)
+// function f1() {}
+// function f2() {}
+// function f3() {
+//     f1();
+// }
+// f2();
+// f3();
+// f1();
+
+// ----
+// f2()//first call delete after execution 
+
+// f3()//after f2() deletion f3 call in f3 also call ==>f1() and delete after execution
+
+// f1()// after deletion of f3() f1 call 
+// ----
+// GEC //first store global memoery 
+
+
+

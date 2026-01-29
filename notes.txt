@@ -45,3 +45,27 @@ defer = safe + fast + recommended
 async = fast but risky
 normal script = slow
 Node.js = JS outside browser
+
+
+function parameters
+
+1)rest parameters allows a function to accept any number of arguments and called them into an array
+syntax ...nameofPara
+rest parameter must be last parameter in the function
+It always create an array
+
+2)
+
+
+
+
+
+
+
+** CallBackFunction
+callbackfunction is a fuction passed as an argument to another function and execute later 
+
+why? callbacks are used
+Handle async operations
+Execute code another task is finished
+used in :  Timmers | API calls | Event Hadaling

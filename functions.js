@@ -116,3 +116,8 @@ function msg(name,callback){
 msg("rohan",function(){
     console.log("good night")
 })
+
+//pure function 
+//Higher Order function
+//Arrow function
+//callstack |Scope | Hoisting | Closure in notes
