@@ -118,6 +118,78 @@ msg("rohan",function(){
 })
 
 //pure function 
-//Higher Order function
+
+//pure function is that always return the same output for the same input
+//. Does not change anything outside the function (no side effects)
+
+
+function addition(a, b) {
+  return a + b;
+}
+console.log("addition:",addition(2,3));
+
+// for 2 and 3 o/p: always 5 input same(2,3)=> O/P same=>(5)
+//No global variable change No DOM, no API, no console
+//Important Clarification 🧠 The value can change between calls What must NOT change is the output for the same input.
+
+
+
+//Higher Order function(HOF) => return | take argument as function
+
+//1) function as a argument
+function greet1(name) {
+  return "Hello " + name;
+}
+
+function processUser(fn, value) { //fn as greet (value)  value=> Uday
+  return fn(value);//greet function call here
+}
+
+console.log(processUser(greet1, "Uday"));
+
+//visual flow
+// processUser(greet, "Uday")
+//         ↓
+// fn = greet
+//         ↓
+// fn(value)
+//         ↓
+// greet("Uday")
+//         ↓
+//expected O/P:  "Hello Uday"
+
+
+//return function
+
+function multiplier(factor) {
+  return function (x) {
+    return x * factor;
+  };
+}
+
+const double = multiplier(2);
+console.log(double(5)); // 10
+
+
+
 //Arrow function
+//Syntax : const functionName = (parameters) => expression;
+const sub = (x,y) => x-y;
+console.log(sub(10,5));
+
+const greet2 = (name) => {
+  return "Hello " + name;
+};
+
+console.log(greet2("rohan"))
+
+//arrow function as call back function
+
+const nums = [1, 2, 3];
+
+const squares = nums.map(n => n * n);
+
+console.log(squares);
+
+
 //callstack |Scope | Hoisting | Closure in notes
