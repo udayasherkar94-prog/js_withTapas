@@ -69,3 +69,11 @@ why? callbacks are used
 Handle async operations
 Execute code another task is finished
 used in :  Timmers | API calls | Event Hadaling
+
+
+What is a Higher-Order Function (HOF)? 🧠✨
+A higher-order function is a function that does at least one of these:
+✅ Takes another function as an argument
+✅ Returns a function
+👉 map, filter, reduce are higher-order functions because they accept functions.
+
