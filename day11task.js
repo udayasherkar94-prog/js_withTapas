@@ -111,3 +111,37 @@ console.log(counter2.increment()); // 1
 console.log(counter2.increment()); // 2
 console.log(counter2.decrement()); // 1
 console.log(counter2.reset());//0
+
+//additional example
+
+
+function createBank(initialbal){
+    let balance = initialbal;
+
+    return{
+
+        deposit:(amount) =>{
+            balance = balance + amount;
+            console.log(`Deposited :${amount} , current balance:${balance}`)
+        },
+
+        withdraw:(amount) =>{
+            if(amount> balance){
+                console.warn("Insufficient Fund");
+            }
+            else{
+                balance = balance - amount
+                console.log(`withdraw :${amount} , current balance:${balance}`)
+            }
+        },
+
+        checkBal: ()=>console.log("current Balance:",balance)
+    
+    }
+}
+
+const Myaccount = createBank(500);
+console.log(Myaccount)
+console.log(Myaccount.deposit(1000));
+console.log(Myaccount.withdraw(100));
+console.log(Myaccount.checkBal());
