@@ -155,3 +155,5 @@ reduce();//O/P -2 because -1 -1 = -2
 //important factors: outer function and inner function (return by outer fun) , scope ,closure
 
 //here reduce() => it act like closure function
+
+//day10
