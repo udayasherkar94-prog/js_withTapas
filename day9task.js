@@ -97,3 +97,77 @@ Explanation:
 - The function assignment happens later.
 - So calling it before assignment causes an error.
 */
+
+
+
+
+// =======================================
+// HOISTING WITH FUNCTION EXPRESSIONS
+// =======================================
+
+sayHello(); 
+// ❌ TypeError: sayHello is not a function
+// (because only the variable declaration is hoisted, not the assignment)
+
+var sayHello = function () {
+  console.log("Hello!");
+};
+
+/*
+What actually happens internally:
+
+var sayHello;           // hoisted (initialized as undefined)
+sayHello();             // undefined() → TypeError
+sayHello = function() { ... };
+*/
+
+
+// =======================================
+// HOISTING WITH ARROW FUNCTIONS (var)
+// =======================================
+
+greet();
+// ❌ TypeError: greet is not a function
+
+var greet = () => {
+  console.log("Hi!");
+};
+
+/*
+Same behavior as function expression:
+- 'var greet' is hoisted as undefined
+- Arrow function assignment happens later
+*/
+
+
+// =======================================
+// HOISTING WITH ARROW FUNCTIONS (let/const)
+// =======================================
+
+welcome();
+// ❌ ReferenceError: Cannot access 'welcome' before initialization
+// (because of Temporal Dead Zone)
+
+const welcome = () => {
+  console.log("Welcome!");
+};
+
+/*
+Explanation:
+- 'const welcome' is hoisted but not initialized.
+- It stays in the Temporal Dead Zone (TDZ)
+  until the declaration line is executed.
+- Accessing it before that causes ReferenceError.
+*/
+
+
+// =======================================
+// SUMMARY
+// =======================================
+
+/*
+1. Function Declarations → Fully hoisted (can call before definition)
+2. Function Expressions (var) → Declaration hoisted, value = undefined
+3. Arrow Functions (var) → Same as function expressions
+4. Arrow / Expressions (let/const) → Hoisted but in TDZ (ReferenceError)
+*/

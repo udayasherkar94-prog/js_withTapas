@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttonCount</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,body{
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(132, 216, 150);
+    }
+
+
+   #btn{
+    position:absolute;
+    font-size: larger;
+    border: none;
+    border-radius: 8px;
+    outline: 2px solid red;
+    height: 60px;
+    width: 150px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+   }
+</style>
+<body>
+    <button id="btn"> click</button>
+    
+
+    <script>
+
+        function setupButton(){
+            
+            let clickCount = 0;
+
+            let btn = document.getElementById('btn')
+            btn.addEventListener('click',function(e){
+              
+        
+                    clickCount++;
+
+                    console.log(`button clicked :${clickCount} `);
+                
+                
+            })
+        }
+
+
+         setupButton();
+      
+
+    </script>
+</body>
+</html>

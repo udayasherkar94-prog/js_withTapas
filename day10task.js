@@ -144,5 +144,14 @@ function counter() {
 }
 
 const reduce = counter();
-reduce();
-reduce();
+reduce();// O/P -1  because 0-1 = -1
+reduce();//O/P -2 because -1 -1 = -2 
+//but mean thing is here closure how it remenber the updated value of counter it does not reset to the zero
+//here it works as encapsulation where it treat as counter variable is private cannot change directly 
+//you can access it use it in your function but you cant modify the original value 
+//so there how closure works 
+//closure always closed on a value of a varible fromm his outer function . It remembers the value
+//a closure allow a function to access a variable from its outer scope even after the Outer function finishes execution
+//important factors: outer function and inner function (return by outer fun) , scope ,closure
+
+//here reduce() => it act like closure function
